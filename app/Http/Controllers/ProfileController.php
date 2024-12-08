@@ -8,7 +8,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
-use Illuminate\Http\Response;
 
 class ProfileController extends Controller
 {
@@ -20,11 +19,6 @@ class ProfileController extends Controller
         return view('profile.edit', [
             'user' => $request->user(),
         ]);
-    }
-
-    public function index():Response
-    {
-        return response('Hello, World!');
     }
 
     /**
