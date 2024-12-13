@@ -15,11 +15,9 @@ class ChirpController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(): View
+    public function dashboard(): View
     {
-        //
-        return response('Hello, World');
-        return view('chirps.index', [
+        return view('dashboard', [
             'chirps' => Chirp::with('user')->latest()->get(),
         ]);
     }
